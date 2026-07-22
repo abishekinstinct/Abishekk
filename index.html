@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RIT Internal Simplifier</title>
+</head>
+
+<body>
+
+    <!-- Main Header -->
+    <header class="header">
+
+        <h1>RIT Internal Simplifier</h1>
+
+        <p>
+            Rapidly calculate your CAT marks
+        </p>
+
+    </header>
+
+
+    <!-- Simplifier Card -->
+    <main class="card">
+
+        <h2>Internal Simplifier</h2>
+
+        <p class="description">
+            Hi guys,Calculate your RIT internal marks rapidly
+        </p>
+
+
+        <!-- Pass Mark -->
+        <p class="pass-mark">
+            Minimum internals (pass mark) = 23
+        </p>
+
+
+        <!-- Error Message -->
+        <p id="error"></p>
+
+
+        <!-- Input Section -->
+        <div class="inputs">
+
+
+            <!-- CAT 1 -->
+            <div class="input-group">
+
+                <label for="cat1">
+                    CAT 1 (0-50)
+                </label>
+
+                <input
+                    id="cat1"
+                    type="number"
+                    min="0"
+                    max="50"
+                    placeholder="Enter CAT 1 mark"
+                >
+
+            </div>
+
+
+            <!-- CAT 2 -->
+            <div class="input-group">
+
+                <label for="cat2">
+                    CAT 2 (0-25)
+                </label>
+
+                <input
+                    id="cat2"
+                    type="number"
+                    min="0"
+                    max="25"
+                    placeholder="Enter CAT 2 mark"
+                >
+
+            </div>
+
+
+            <!-- CAT 3 -->
+            <div class="input-group">
+
+                <label for="cat3">
+                    CAT 3 (0-50)
+                </label>
+
+                <input
+                    id="cat3"
+                    type="number"
+                    min="0"
+                    max="50"
+                    placeholder="Enter CAT 3 mark"
+                >
+
+            </div>
+
+
+            <!-- Assignment -->
+            <div class="input-group">
+
+                <label for="assignment">
+                    Assignment (0-50)
+                </label>
+
+                <input
+                    id="assignment"
+                    type="number"
+                    min="0"
+                    max="50"
+                    placeholder="Enter assignment mark"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button
+                class="calculate-btn"
+                onclick="calculate()">
+                🧮 Calculate
+            </button>
+
+            <button
+                class="reset-btn"
+                onclick="resetCalc()">
+                ↻ Reset
+            </button>
+
+        </div>
+
+
+        <!-- Result Section -->
+        <div class="result-section">
+
+            <h2>Total Internal Marks:</h2>
+
+            <h1 id="result">
+                0 / 40
+            </h1>
+
+            <!-- Pass or Fail -->
+            <h2 id="status"></h2>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
