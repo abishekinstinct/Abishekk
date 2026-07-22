@@ -1,0 +1,388 @@
+/* ------------------------------
+   GENERAL SETTINGS
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    padding: 20px;
+
+    font-family: Roboto, sans-serif;
+
+    background-color: #eaf2ff;
+
+    color: #333;
+
+    text-align: center;
+
+}
+
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+.header {
+
+    padding: 30px 10px;
+
+}
+
+.header h1 {
+
+    margin: 0;
+
+    color: #07579e;
+
+    font-size: 42px;
+
+}
+
+.header p {
+
+    color: #666;
+
+    font-size: 18px;
+
+}
+
+
+/* ------------------------------
+   CALCULATOR CARD
+------------------------------ */
+
+.card {
+
+    background-color: white;
+
+    width: 90%;
+
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Card Heading */
+
+.card h2 {
+
+    color: #1475d1;
+
+}
+
+
+/* Description */
+
+.description {
+
+    color: #666;
+
+    font-size: 17px;
+
+}
+
+
+/* Pass Mark */
+
+.pass-mark {
+
+    margin: 25px 0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+/* ------------------------------
+   ERROR MESSAGE
+------------------------------ */
+
+#error {
+
+    color: red;
+
+    font-weight: bold;
+
+    min-height: 20px;
+
+}
+
+
+/* ------------------------------
+   INPUT GRID
+------------------------------ */
+
+.inputs {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-top: 25px;
+
+}
+
+
+/* Input Group */
+
+.input-group {
+
+    text-align: left;
+
+}
+
+
+/* Labels */
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+/* Input Boxes */
+
+input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+}
+
+
+/* Input Focus */
+
+input:focus {
+
+    border-color: #1475d1;
+
+    box-shadow:
+        0 0 5px
+        rgba(20, 117, 209, 0.3);
+
+}
+
+
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+
+.buttons {
+
+    margin-top: 30px;
+
+}
+
+
+/* Common Button */
+
+button {
+
+    padding: 13px 25px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+/* Calculate Button */
+
+.calculate-btn {
+
+    background-color: #20a844;
+
+    color: white;
+
+}
+
+
+/* Reset Button */
+
+.reset-btn {
+
+    background-color: #e0e0e0;
+
+    color: #555;
+
+}
+
+
+/* Hover Effects */
+
+.calculate-btn:hover {
+
+    background-color: #168b36;
+
+}
+
+.reset-btn:hover {
+
+    background-color: #ccc;
+
+}
+
+
+/* ------------------------------
+   RESULT
+------------------------------ */
+
+.result-section {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+
+}
+
+
+#result {
+
+    color: #1475d1;
+
+    font-size: 35px;
+
+}
+
+
+/* PASS */
+
+.pass {
+
+    color: green;
+
+}
+
+
+/* FAIL */
+
+.fail {
+
+    color: red;
+
+}
+
+
+/* ------------------------------
+   MOBILE RESPONSIVE DESIGN
+------------------------------ */
+
+@media (max-width: 600px) {
+
+
+    body {
+
+        padding: 10px;
+
+    }
+
+
+    .header {
+
+        padding: 20px 5px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .header p {
+
+        font-size: 16px;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        padding: 25px 20px;
+
+        margin: 10px auto;
+
+    }
+
+
+    /* Change two columns
+       to one column */
+
+    .inputs {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    input {
+
+        padding: 13px;
+
+    }
+
+
+    button {
+
+        width: 90%;
+
+        margin: 6px auto;
+
+    }
+
+
+    #result {
+
+        font-size: 30px;
+
+    }
+
+}
