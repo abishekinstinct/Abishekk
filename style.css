@@ -1,6 +1,6 @@
-/* ------------------------------
+/* ==============================
    GENERAL SETTINGS
------------------------------- */
+============================== */
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
 
     padding: 20px;
 
-    font-family: Roboto, sans-serif;
+    font-family: Arial, sans-serif;
 
     background-color: #eaf2ff;
 
@@ -23,9 +23,9 @@ body {
 }
 
 
-/* ------------------------------
+/* ==============================
    HEADER
------------------------------- */
+============================== */
 
 .header {
 
@@ -52,9 +52,9 @@ body {
 }
 
 
-/* ------------------------------
+/* ==============================
    CALCULATOR CARD
------------------------------- */
+============================== */
 
 .card {
 
@@ -76,17 +76,11 @@ body {
 
 }
 
-
-/* Card Heading */
-
 .card h2 {
 
     color: #1475d1;
 
 }
-
-
-/* Description */
 
 .description {
 
@@ -95,9 +89,6 @@ body {
     font-size: 17px;
 
 }
-
-
-/* Pass Mark */
 
 .pass-mark {
 
@@ -110,9 +101,9 @@ body {
 }
 
 
-/* ------------------------------
-   ERROR MESSAGE
------------------------------- */
+/* ==============================
+   ERROR
+============================== */
 
 #error {
 
@@ -125,9 +116,9 @@ body {
 }
 
 
-/* ------------------------------
+/* ==============================
    INPUT GRID
------------------------------- */
+============================== */
 
 .inputs {
 
@@ -141,9 +132,6 @@ body {
 
 }
 
-
-/* Input Group */
-
 .input-group {
 
     text-align: left;
@@ -151,7 +139,9 @@ body {
 }
 
 
-/* Labels */
+/* ==============================
+   LABELS
+============================== */
 
 label {
 
@@ -164,7 +154,9 @@ label {
 }
 
 
-/* Input Boxes */
+/* ==============================
+   INPUT BOXES
+============================== */
 
 input {
 
@@ -182,9 +174,6 @@ input {
 
 }
 
-
-/* Input Focus */
-
 input:focus {
 
     border-color: #1475d1;
@@ -196,18 +185,15 @@ input:focus {
 }
 
 
-/* ------------------------------
+/* ==============================
    BUTTONS
------------------------------- */
+============================== */
 
 .buttons {
 
     margin-top: 30px;
 
 }
-
-
-/* Common Button */
 
 button {
 
@@ -223,10 +209,24 @@ button {
 
     cursor: pointer;
 
+    transition: 0.2s;
+
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+button:active {
+
+    transform: scale(0.97);
+
 }
 
 
-/* Calculate Button */
+/* CALCULATE */
 
 .calculate-btn {
 
@@ -236,23 +236,20 @@ button {
 
 }
 
+.calculate-btn:hover {
 
-/* Reset Button */
+    background-color: #168b36;
+
+}
+
+
+/* RESET */
 
 .reset-btn {
 
     background-color: #e0e0e0;
 
     color: #555;
-
-}
-
-
-/* Hover Effects */
-
-.calculate-btn:hover {
-
-    background-color: #168b36;
 
 }
 
@@ -263,9 +260,9 @@ button {
 }
 
 
-/* ------------------------------
+/* ==============================
    RESULT
------------------------------- */
+============================== */
 
 .result-section {
 
@@ -274,6 +271,19 @@ button {
     padding-top: 20px;
 
     border-top: 1px solid #ddd;
+
+}
+
+
+.result-box {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background-color: #f5f9ff;
 
 }
 
@@ -305,9 +315,26 @@ button {
 }
 
 
-/* ------------------------------
-   MOBILE RESPONSIVE DESIGN
------------------------------- */
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
 
 @media (max-width: 600px) {
 
@@ -351,8 +378,7 @@ button {
     }
 
 
-    /* Change two columns
-       to one column */
+    /* One column on mobile */
 
     .inputs {
 
