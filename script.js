@@ -1,11 +1,11 @@
-/* --------------------------------
-   CALCULATE FUNCTION
--------------------------------- */
+/* ==============================
+   CALCULATE
+============================== */
 
 function calculate() {
 
 
-    // Get values from input boxes
+    // Get input elements
 
     let cat1Input =
         document.getElementById("cat1");
@@ -20,19 +20,22 @@ function calculate() {
         document.getElementById("assignment");
 
 
-    // Convert input values to numbers
+    // Get values
 
-    let cat1 = Number(cat1Input.value);
+    let cat1 =
+        Number(cat1Input.value);
 
-    let cat2 = Number(cat2Input.value);
+    let cat2 =
+        Number(cat2Input.value);
 
-    let cat3 = Number(cat3Input.value);
+    let cat3 =
+        Number(cat3Input.value);
 
     let assignment =
         Number(assignmentInput.value);
 
 
-    // Get error and result elements
+    // Get output elements
 
     let error =
         document.getElementById("error");
@@ -44,18 +47,20 @@ function calculate() {
         document.getElementById("status");
 
 
-    /* --------------------------------
-       VALIDATION
-    -------------------------------- */
-
-
-    // Check if any field is empty
+    /* ==============================
+       CHECK EMPTY INPUTS
+    ============================== */
 
     if (
+
         cat1Input.value === "" ||
+
         cat2Input.value === "" ||
+
         cat3Input.value === "" ||
+
         assignmentInput.value === ""
+
     ) {
 
         error.innerText =
@@ -71,12 +76,12 @@ function calculate() {
     }
 
 
-    // Check valid mark ranges
+    /* ==============================
+       VALIDATION
+    ============================== */
 
-    if (
-        cat1 < 0 ||
-        cat1 > 50
-    ) {
+
+    if (cat1 < 0 || cat1 > 50) {
 
         error.innerText =
             "⚠️ CAT 1 must be between 0 and 50.";
@@ -86,10 +91,7 @@ function calculate() {
     }
 
 
-    if (
-        cat2 < 0 ||
-        cat2 > 25
-    ) {
+    if (cat2 < 0 || cat2 > 25) {
 
         error.innerText =
             "⚠️ CAT 2 must be between 0 and 25.";
@@ -99,10 +101,7 @@ function calculate() {
     }
 
 
-    if (
-        cat3 < 0 ||
-        cat3 > 50
-    ) {
+    if (cat3 < 0 || cat3 > 50) {
 
         error.innerText =
             "⚠️ CAT 3 must be between 0 and 50.";
@@ -125,27 +124,27 @@ function calculate() {
     }
 
 
-    // Clear previous error
+    // Clear old error
 
     error.innerText = "";
 
 
-    /* --------------------------------
+    /* ==============================
        CALCULATION
-    -------------------------------- */
+    ==============================
 
-    /*
-       TEMPORARY FORMULA
+       TEMPORARY FORMULA:
 
-       CAT 1       = 12 marks
-       CAT 2       = 6 marks
-       CAT 3       = 12 marks
-       Assignment  = 10 marks
+       CAT 1       → 12 marks
+       CAT 2       → 6 marks
+       CAT 3       → 12 marks
+       Assignment  → 10 marks
 
-       Total = 40 marks
+       Total = 40
 
-       Replace this formula with
-       the actual RIT formula.
+       IMPORTANT:
+       Replace this formula with the
+       actual RIT formula when confirmed.
     */
 
 
@@ -160,59 +159,73 @@ function calculate() {
         (assignment / 50) * 10;
 
 
-    /* --------------------------------
-       DISPLAY RESULT
-    -------------------------------- */
 
+    /* ==============================
+       DISPLAY RESULT
+    ============================== */
 
     result.innerText =
-        total.toFixed(2) + " / 40";
+
+        total.toFixed(2) +
+
+        " / 40";
 
 
-    /* --------------------------------
-       PASS OR FAIL
-    -------------------------------- */
 
+    /* ==============================
+       PASS / FAIL
+    ============================== */
 
     if (total >= 23) {
+
 
         status.innerText =
             "✅ PASS";
 
+
         status.className =
             "pass";
+
 
     }
 
     else {
 
+
         status.innerText =
             "❌ FAIL";
 
+
         status.className =
             "fail";
+
 
     }
 
 }
 
 
-/* --------------------------------
-   RESET FUNCTION
--------------------------------- */
+
+/* ==============================
+   RESET
+============================== */
 
 function resetCalc() {
 
 
-    // Clear all inputs
+    // Clear inputs
 
-    document.getElementById("cat1").value = "";
+    document.getElementById("cat1").value =
+        "";
 
-    document.getElementById("cat2").value = "";
+    document.getElementById("cat2").value =
+        "";
 
-    document.getElementById("cat3").value = "";
+    document.getElementById("cat3").value =
+        "";
 
-    document.getElementById("assignment").value = "";
+    document.getElementById("assignment").value =
+        "";
 
 
     // Reset result
@@ -223,16 +236,19 @@ function resetCalc() {
 
     // Clear status
 
-    document.getElementById("status").innerText = "";
+    document.getElementById("status").innerText =
+        "";
 
 
     // Clear error
 
-    document.getElementById("error").innerText = "";
+    document.getElementById("error").innerText =
+        "";
 
 
-    // Remove PASS/FAIL styling
+    // Remove PASS / FAIL class
 
-    document.getElementById("status").className = "";
+    document.getElementById("status").className =
+        "";
 
 }
