@@ -2,53 +2,65 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>RIT Internal Simplifier</title>
+    <title>RIT Internals Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- Main Header -->
+
+    <!-- HEADER -->
+
     <header class="header">
 
-        <h1>RIT Internal Simplifier</h1>
+        <h1>RIT Internals Calculator</h1>
 
         <p>
-            Rapidly calculate your CAT marks
+            Quickly calculate your internal assessment marks
         </p>
 
     </header>
 
 
-    <!-- Simplifier Card -->
+
+    <!-- CALCULATOR -->
+
     <main class="card">
 
-        <h2>Internal Simplifier</h2>
+        <h2>Internals Calculator</h2>
 
         <p class="description">
-            Hi guys,Calculate your RIT internal marks rapidly
+            Calculate your RIT internal marks easily
         </p>
 
 
-        <!-- Pass Mark -->
         <p class="pass-mark">
             Minimum internals (pass mark) = 23
         </p>
 
 
-        <!-- Error Message -->
+        <!-- ERROR -->
+
         <p id="error"></p>
 
 
-        <!-- Input Section -->
+
+        <!-- INPUTS -->
+
         <div class="inputs">
 
 
             <!-- CAT 1 -->
+
             <div class="input-group">
 
                 <label for="cat1">
@@ -60,13 +72,16 @@
                     type="number"
                     min="0"
                     max="50"
+                    step="1"
                     placeholder="Enter CAT 1 mark"
                 >
 
             </div>
 
 
+
             <!-- CAT 2 -->
+
             <div class="input-group">
 
                 <label for="cat2">
@@ -78,13 +93,16 @@
                     type="number"
                     min="0"
                     max="25"
+                    step="1"
                     placeholder="Enter CAT 2 mark"
                 >
 
             </div>
 
 
+
             <!-- CAT 3 -->
+
             <div class="input-group">
 
                 <label for="cat3">
@@ -96,13 +114,16 @@
                     type="number"
                     min="0"
                     max="50"
+                    step="1"
                     placeholder="Enter CAT 3 mark"
                 >
 
             </div>
 
 
-            <!-- Assignment -->
+
+            <!-- ASSIGNMENT -->
+
             <div class="input-group">
 
                 <label for="assignment">
@@ -114,51 +135,87 @@
                     type="number"
                     min="0"
                     max="50"
+                    step="1"
                     placeholder="Enter assignment mark"
                 >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button
+                class="calculate-btn"
+                onclick="calculate()">
+
+                🧮 Calculate
+
+            </button>
+
+
+            <button
+                class="reset-btn"
+                onclick="resetCalc()">
+
+                ↻ Reset
+
+            </button>
+
+        </div>
+
+
+
+        <!-- RESULT -->
+
+        <div class="result-section">
+
+            <h2>Total Internal Marks:</h2>
+
+
+            <div class="result-box">
+
+                <h1 id="result">
+                    0 / 40
+                </h1>
+
+
+                <h2 id="status"></h2>
 
             </div>
 
         </div>
 
 
-        <!-- Buttons -->
-        <div class="buttons">
-
-            <button
-                class="calculate-btn"
-                onclick="calculate()">
-                🧮 Calculate
-            </button>
-
-            <button
-                class="reset-btn"
-                onclick="resetCalc()">
-                ↻ Reset
-            </button>
-
-        </div>
-
-
-        <!-- Result Section -->
-        <div class="result-section">
-
-            <h2>Total Internal Marks:</h2>
-
-            <h1 id="result">
-                0 / 40
-            </h1>
-
-            <!-- Pass or Fail -->
-            <h2 id="status"></h2>
-
-        </div>
-
     </main>
 
 
-    <!-- JavaScript -->
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            RIT Internals Calculator
+        </p>
+
+        <p>
+            Made for educational purposes
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
+
 
 </body>
 
