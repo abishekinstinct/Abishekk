@@ -12,11 +12,11 @@ body {
 
     padding: 20px;
 
-    font-family: Arial, sans-serif;
+    font-family: Roboto, Roman;
 
-    background-color: #eaf2ff;
+    background-color: turquoise;
 
-    color: #333;
+    color: #444;
 
     text-align: center;
 
@@ -37,7 +37,7 @@ body {
 
     margin: 0;
 
-    color: #07579e;
+    color: Black;
 
     font-size: 42px;
 
@@ -45,7 +45,7 @@ body {
 
 .header p {
 
-    color: #666;
+    color: white;
 
     font-size: 18px;
 
