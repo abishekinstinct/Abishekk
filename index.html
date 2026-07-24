@@ -10,6 +10,7 @@
 
     <title>RIT Internal Simplifier</title>
 
+    <!-- Connect CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -18,43 +19,51 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header class="header">
 
         <h1>RIT Internal Simplifier</h1>
 
         <p>
-           Hi guys, calculate your internal assessment marks
+            Hi guys! Simplify your internal assessment marks
         </p>
 
     </header>
 
 
 
-    <!-- CALCULATOR -->
+    <!-- =========================
+         INTERNAL SIMPLIFIER
+    ========================== -->
 
     <main class="card">
 
         <h2>Internal Simplifier</h2>
 
         <p class="description">
-            Calculate your RIT internal marks
+            Enter your marks to simplify your RIT internal assessment
         </p>
 
+
+        <!-- PASS MARK -->
 
         <p class="pass-mark">
-            Minimum internals (pass mark) = 23
+            Minimum internal mark to pass = 23 / 40
         </p>
 
 
-        <!-- ERROR -->
+        <!-- ERROR MESSAGE -->
 
         <p id="error"></p>
 
 
 
-        <!-- INPUTS -->
+        <!-- =========================
+             INPUT SECTION
+        ========================== -->
 
         <div class="inputs">
 
@@ -64,7 +73,7 @@
             <div class="input-group">
 
                 <label for="cat1">
-                    CAT 1 (0-50)
+                    CAT 1 (0 - 50)
                 </label>
 
                 <input
@@ -85,7 +94,7 @@
             <div class="input-group">
 
                 <label for="cat2">
-                    CAT 2 (0-25)
+                    CAT 2 (0 - 25)
                 </label>
 
                 <input
@@ -106,7 +115,7 @@
             <div class="input-group">
 
                 <label for="cat3">
-                    CAT 3 (0-50)
+                    CAT 3 (0 - 50)
                 </label>
 
                 <input
@@ -127,7 +136,7 @@
             <div class="input-group">
 
                 <label for="assignment">
-                    Assignment (0-50)
+                    Assignment (0 - 50)
                 </label>
 
                 <input
@@ -146,20 +155,30 @@
 
 
 
-        <!-- BUTTONS -->
+        <!-- =========================
+             BUTTONS
+        ========================== -->
 
         <div class="buttons">
 
+
+            <!-- SIMPLIFY BUTTON -->
+
             <button
+                type="button"
                 class="calculate-btn"
                 onclick="calculate()">
 
-                🧮 Calculate
+                🧮 Simplify Marks
 
             </button>
 
 
+
+            <!-- RESET BUTTON -->
+
             <button
+                type="button"
                 class="reset-btn"
                 onclick="resetCalc()">
 
@@ -167,15 +186,20 @@
 
             </button>
 
+
         </div>
 
 
 
-        <!-- RESULT -->
+        <!-- =========================
+             RESULT
+        ========================== -->
 
         <div class="result-section">
 
-            <h2>Total Internal Marks:</h2>
+            <h2>
+                Your Simplified Internal Mark
+            </h2>
 
 
             <div class="result-box">
@@ -196,7 +220,9 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
@@ -212,7 +238,9 @@
 
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =========================
+         CONNECT JAVASCRIPT
+    ========================== -->
 
     <script src="script.js"></script>
 
